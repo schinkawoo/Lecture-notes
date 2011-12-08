@@ -1,0 +1,24 @@
+-Protocol dynamics can help to better understand behavior of our protocol. Afterwards we can easily calibrate the parameters to get the better functionality. 
+-Today’s networks are very difficult to analyze because of their complexity. It is almost impossible to do that on the microscopic level. 
+-We base our analysis on abstract models, and use tools that are proven to work, form other science fields, i.e. biology, electronics, telecommunication or mechanics.
+
+We use signal processing in frequency domain:
+	-To avoid very complex calculations
+	- We can easily switch back to time domain that is more intuitive to us
+	-It is easy to reuse results of the tests
+
+We need tree main steps to transpose protocols. First we need to view protocols as systems, and for that we need to make relation between input and output of system and protocol. We also need to describe protocol behavior as relationship between input and output signals, that is called transfer function.
+
+-Protocols that can be described as systems need to be described with mathematical rules and behaviors. One such example is Chemical Network Protocol
+//GET BACK AT THIS POINT WHEN YOU FINISH WITH CHEMICAL NETWORK PRESENTATION BY TOMAS MEYER
+
+-As input we can use any kind of variable that is important for performance of the system, i.e. number of packets or service rate. Equally important is the point of view on the system. In time domain that is that is most intuitive for us, it is very hard to analyze the signal. So we use frequency domain in which we can distinguish different parts of the signal.
+
+In frequency domain it is much simpler to express transfer function. Differentiation and Integration correspond to multiplication and division, and Integral and Differential equations correspond to much simpler polynomial equations. To switch into frequency domain, for continuous signal in time we use Laplace transform, and for discrete signal in time we use Z transform. For switching back we have inverse transformations. In practice we can use these transformations for the BIBO system – systems that have bounded input and output (low of mass action in chemical networking protocol). 
+
+If we are dealing with a complex system that can be divided into array of les complex ones, we can simply multiply their transfer functions into the transfer function of the whole system. We can also maybe reuse transfer function of some system that is used in composition of other one.
+// if necessary, here goes disperse protocol example, after reading chemical networks
+// then goes Metabolic Control Analysis that I don’t understand at all
+// example of C3A Protocol based on MCA that implicitly I also don’t understand
+
+At the end we can say that this type of approach to protocol analyzing introduces new point of view that can be used not only on Chemical networks but on all protocol that can be expressed as a fluid abstract model.  It also further explains basic concepts of control theory, and how can it be used in protocol analysis.
